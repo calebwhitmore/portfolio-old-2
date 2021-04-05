@@ -85,7 +85,7 @@
 
         &:before {
           content:"→";
-          margin-left:-24px;
+          margin-left:calc(0px - var(--font-size-s));
           opacity:0;
           transition: 0.15s all ease;
           width:0px;

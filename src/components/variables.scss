@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
 
 :root {
   --black: #000000;
@@ -10,21 +9,21 @@
   --black24: rgba(0, 0, 0, 0.24);
   --black12: rgba(0, 0, 0, 0.12);
   --black08: rgba(0, 0, 0, 0.08);
-  --black06: rgba(0, 0, 0, 0.06); 
+  --black06: rgba(0, 0, 0, 0.06);
 
-  --transparent: rgba(0, 0, 0, 0.00); 
-  
+  --transparent: rgba(0, 0, 0, 0);
+
   --white: #ffffff;
-  --white90:rgba(255,255,255,0.9);
-  --white80:rgba(255,255,255,0.8);
-  --white60:rgba(255,255,255,0.6);
-  --white24:rgba(255,255,255,0.24);
-  --white12:rgba(255,255,255,0.12);
-  --white08:rgba(255,255,255,0.12);
-  --white06:rgba(255,255,255,0.12);
+  --white90: rgba(255, 255, 255, 0.9);
+  --white80: rgba(255, 255, 255, 0.8);
+  --white60: rgba(255, 255, 255, 0.6);
+  --white24: rgba(255, 255, 255, 0.24);
+  --white12: rgba(255, 255, 255, 0.12);
+  --white08: rgba(255, 255, 255, 0.12);
+  --white06: rgba(255, 255, 255, 0.12);
 
   --light-grey40: rgba(215, 215, 215, 0.4);
-  --dark-grey40:rgba(127.5, 127.5, 127.5, 0.4);
+  --dark-grey40: rgba(127.5, 127.5, 127.5, 0.4);
 
   --theme-1: #0064ea;
 
@@ -46,26 +45,26 @@
   --font-size-s: 24px;
   --font-size-xs: 20px;
 
-  --border-radius-small:5px;
-  --border-radius-large:10px;
-  --box-shadow-1:0px 2px 8px 0px var(--black-overlay-08);
+  --border-radius-small: 5px;
+  --border-radius-large: 10px;
+  --box-shadow-1: 0px 2px 8px 0px var(--black-overlay-08);
 }
 
 @media only screen and (max-width: 1000px) {
   :root {
     --grid-template-columns-3: 3fr 7fr;
     --grid-template-columns-2: 1fr;
-    
+
     --spacing: 20px;
-  --spacing2: 40px;
-  --spacing3: 60px;
+    --spacing2: 40px;
+    --spacing3: 60px;
 
     --font-size-xxl: 64px;
     --font-size-xl: 52px;
     --font-size-l: 36px;
-    --font-size-m: 32px;
-    --font-size-s: 28px;
-    --font-size-xs: 20px;
+    --font-size-m: 28px;
+    --font-size-s: 20px;
+    --font-size-xs: 16px;
   }
 }
 
@@ -82,19 +81,19 @@
   }
 }
 .dark-mode {
-  --black: rgb(255,255,255);
-  --black90: rgba(255,255,255, 0.9);
-  --black80: rgba(255,255,255, 0.8);
-  --black60: rgba(255,255,255, 0.6);
-  --light: rgba(255,255,255, 0.32);
-  --black12: rgba(255,255,255, 0.24);
-  --black12Alt: rgba(255,255,255, 0.18);
-  --black06: rgba(255,255,255, 0.08);
+  --black: rgb(255, 255, 255);
+  --black90: rgba(255, 255, 255, 0.9);
+  --black80: rgba(255, 255, 255, 0.8);
+  --black60: rgba(255, 255, 255, 0.6);
+  --light: rgba(255, 255, 255, 0.32);
+  --black12: rgba(255, 255, 255, 0.24);
+  --black12Alt: rgba(255, 255, 255, 0.18);
+  --black06: rgba(255, 255, 255, 0.08);
   --white: #000000;
   --white-overlay-98: rgba(20, 20, 20, 0.8);
-  --black60: rgba(100, 100, 100, 0.40);
-  --black-overlay-80: rgba(100, 100, 100, 0.80);
-  --black-overlay-12: rgba(100, 100, 100, 0.40);
+  --black60: rgba(100, 100, 100, 0.4);
+  --black-overlay-80: rgba(100, 100, 100, 0.8);
+  --black-overlay-12: rgba(100, 100, 100, 0.4);
   .icon {
     filter: invert(1);
   }
@@ -103,12 +102,11 @@
 body {
   margin: 0 var(--spacing);
   overflow: visible;
-  background-color:transparent;
-;
+  background-color: transparent;
 }
 html {
   overflow: visible;
-  background-color:var(--black06)
+  background-color: var(--black06);
 }
 
 * {
@@ -135,23 +133,22 @@ div {
 h1 {
   font-size: var(--font-size-xl);
   line-height: var(--font-size-xxl);
-  font-weight:700;
+  font-weight: 700;
 }
 h2 {
   font-size: var(--font-size-l);
   line-height: var(--font-size-xl);
-  
 }
 
 h3 {
-    font-size: var(--font-size-m);
-    line-height: var(--font-size-l);
+  font-size: var(--font-size-m);
+  line-height: var(--font-size-l);
 }
 
 h4 {
   font-size: var(--font-size-s);
   line-height: var(--font-size-m);
-  font-weight:400;
+  font-weight: 400;
 }
 
 p {
@@ -169,7 +166,7 @@ h1 a {
 a {
   color: var(--black90);
   text-decoration: none;
-  display:block;
+  display: block;
 }
 
 .intro {
@@ -183,7 +180,7 @@ a {
 
   h4 {
     margin-top: var(--spacing);
-    color:var(--black60);
+    color: var(--black60);
   }
 }
 
@@ -199,10 +196,10 @@ a {
 }
 
 @keyframes fade {
-  0%{
-      opacity:0;
+  0% {
+    opacity: 0;
   }
   100% {
-      opacity:1;
+    opacity: 1;
   }
 }
