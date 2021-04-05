@@ -1,0 +1,96 @@
+@mixin transition {
+  @for $i from 1 through 1000 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.12}s;
+    }
+  }
+}
+
+.project-container {
+  @include transition;
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  transition: 0.3s all ease;
+  opacity: 0;
+  transform: translate(0px, 40px);
+  animation: fadeUp 0.3s forwards ease;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+
+    .project {
+      background-color: var(--black);
+      .post-image {
+        opacity: 0.4;
+        filter: blur(8px);
+      }
+      .projectTileText {
+        opacity: 1;
+        transform: translate(0px, 0px) scale(1);
+      }
+    }
+  }
+}
+
+.project {
+  background-color: var(--white);
+  border-radius: var(--border-radius-large);
+  transition: 0.3s all ease;
+  min-height: 200px;
+  position: static;
+  cursor: pointer;
+
+  & * {
+    transition: 0.3s all ease;
+  }
+
+  &:hover {
+    background-color: var(--black);
+    .post-image {
+      opacity: 0.4;
+      filter: blur(8px);
+    }
+    .projectTileText {
+      opacity: 1;
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  .projectTileText {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transform: translate(0px, 0px) scale(1.1);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: center;
+    padding: var(--spacing);
+    cursor: pointer;
+  }
+  .post-image {
+    width: auto;
+    z-index: 1;
+    img {
+      margin: 0px;
+    }
+  }
+
+  h2,
+  p {
+    width: 100%;
+    text-align: left;
+    align-self: flex-end;
+  }
+
+  h2 {
+    color: var(--white);
+  }
+  p {
+    line-height: var(--font-size-s);
+    color: var(--white60);
+    margin-top: calc(var(--spacing) / 4);
+  }
+}
