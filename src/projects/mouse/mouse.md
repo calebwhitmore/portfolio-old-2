@@ -1,5 +1,5 @@
 ---
-path: "/project/mariner-interiors"
+path: "/project/mouse"
 date: "2020-01-01"
 title: "Mouse redesign"
 tags: "Industrial design"

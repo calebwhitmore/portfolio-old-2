@@ -6,7 +6,7 @@ module.exports = [{
       options: {"plugins":[],"trackingId":"UA-61090085-1","head":false,"anonymize":false,"respectDNT":false,"exclude":[],"pageTransitionDelay":0},
     },{
       plugin: require('../node_modules/gatsby-plugin-manifest/gatsby-browser.js'),
-      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","display":"minimal-ui","icon":"/src/images/logo.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":null},
+      options: {"plugins":[],"name":"caleb-whitmores-portfolio","short_name":"portfolio","start_url":"/","display":"minimal-ui","icon":"src/images/cw-logo.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"65469bbd683a2a155030b37af3b0a08a"},
     },{
       plugin: require('../gatsby-browser.js'),
       options: {"plugins":[]},
