@@ -55,7 +55,10 @@
   :root {
     --grid-template-columns-3: 3fr 7fr;
     --grid-template-columns-2: 1fr;
-    --spacing: 2.4rem;
+    
+    --spacing: 20px;
+  --spacing2: 40px;
+  --spacing3: 60px;
 
     --font-size-xxl: 64px;
     --font-size-xl: 52px;
@@ -69,7 +72,6 @@
 @media only screen and (max-width: 600px) {
   :root {
     --grid-template-columns: 1;
-    --spacing: 2rem;
 
     --font-size-xxl: 52px;
     --font-size-xl: 44px;
