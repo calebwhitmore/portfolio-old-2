@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Caleb Whitmore`,
+    title: `Caleb Whitmore's Portfolio`,
     firstName: `Caleb`,
     secondName: `Whitmore`,
     description: `Caleb whitmore is a driven designer from the UK, with a BSc in Product design from Brunel University, London. He works for Microsoft on an email client called Outlook and is based in Seattle, Washington. He has experience in UX design, Product design, 3D modelling and rendering, motion design, graphic design and sketching.`,
@@ -51,7 +51,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+      trackingId: `UA-61090085-1`,
       },
     },
     {
@@ -61,6 +61,7 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         display: `minimal-ui`, // This path is relative to the root of the site.
+        icon: `/src/images/logo.png`
       },
     },
     {
