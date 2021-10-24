@@ -42,17 +42,6 @@ class Header extends React.Component {
               >
                 <p>About</p>
               </Link>
-              {/* <Link
-                className={
-                  "nav-link " +
-                  (this.state.pageTag === "writing"
-                    ? "selected "
-                    : "unselected ")
-                }
-                to="/about"
-              >
-                <p>Writing</p>
-              </Link> */}
               <Link
                 className={
                   "nav-link " +

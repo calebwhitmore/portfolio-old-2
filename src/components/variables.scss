@@ -19,8 +19,8 @@
   --white60: rgba(255, 255, 255, 0.6);
   --white24: rgba(255, 255, 255, 0.24);
   --white12: rgba(255, 255, 255, 0.12);
-  --white08: rgba(255, 255, 255, 0.12);
-  --white06: rgba(255, 255, 255, 0.12);
+  --white08: rgba(255, 255, 255, 0.08);
+  --white06: rgba(255, 255, 255, 0.06);
 
   --light-grey40: rgba(215, 215, 215, 0.4);
   --dark-grey40: rgba(127.5, 127.5, 127.5, 0.4);
@@ -48,6 +48,7 @@
   --border-radius-small: 5px;
   --border-radius-large: 10px;
   --box-shadow-1: 0px 2px 8px 0px var(--black-overlay-08);
+  
 }
 
 @media only screen and (max-width: 1000px) {
@@ -80,33 +81,50 @@
     --font-size-xs: 16px;
   }
 }
-.dark-mode {
-  --black: rgb(255, 255, 255);
-  --black90: rgba(255, 255, 255, 0.9);
-  --black80: rgba(255, 255, 255, 0.8);
-  --black60: rgba(255, 255, 255, 0.6);
-  --light: rgba(255, 255, 255, 0.32);
-  --black12: rgba(255, 255, 255, 0.24);
-  --black12Alt: rgba(255, 255, 255, 0.18);
-  --black06: rgba(255, 255, 255, 0.08);
-  --white: #000000;
-  --white-overlay-98: rgba(20, 20, 20, 0.8);
-  --black60: rgba(100, 100, 100, 0.4);
-  --black-overlay-80: rgba(100, 100, 100, 0.8);
-  --black-overlay-12: rgba(100, 100, 100, 0.4);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #000000;
+    --white90: rgba(0, 0, 0, 0.9);
+    --white80: rgba(0, 0, 0, 0.8);
+    --white60: rgba(0, 0, 0, 0.6);
+    --white40: rgba(0, 0, 0, 0.4);
+    --white24: rgba(0, 0, 0, 0.24);
+    --white12: rgba(0, 0, 0, 0.12);
+    --white08: rgba(0, 0, 0, 0.08);
+    --white06: rgba(0, 0, 0, 0.06);
+
+    --transparent: rgba(0, 0, 0, 0);
+
+    --black: #ffffff;
+    --black90: rgba(255, 255, 255, 0.9);
+    --black80: rgba(255, 255, 255, 0.8);
+    --black60: rgba(255, 255, 255, 0.6);
+    --black24: rgba(255, 255, 255, 0.24);
+    --black12: rgba(255, 255, 255, 0.12);
+    --black08: rgba(255, 255, 255, 0.08);
+    --black06: rgba(255, 255, 255, 0.06);
+  }   
   .icon {
     filter: invert(1);
   }
-}
+} 
+
+
 
 body {
-  margin: 0 var(--spacing);
+  margin: 0;
   overflow: visible;
-  background-color: transparent;
+  background-color: var(--black06);
+  top:0px;
+  width:100vw;
+  height:auto;
+  position:absolute;
+  padding:0 var(--spacing);
+
 }
 html {
   overflow: visible;
-  background-color: var(--black06);
+  background-color: var(--white);
 }
 
 * {

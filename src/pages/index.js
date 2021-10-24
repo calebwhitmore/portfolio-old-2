@@ -13,7 +13,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <div className="intro">
         <h1 className="summary">
-          A designer focused on craft, delight, and seamless user experiences.
+          I'm Caleb. A designer focused on craft, delight, and seamless user experiences.
         </h1>
       </div>
       <div>
