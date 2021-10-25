@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import onRock2 from "./on-rock2.jpg"
+import onRock2 from "../assets/on-rock2.png"
 import "animate.css/animate.min.css"
 import "./about.scss"
 

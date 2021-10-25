@@ -4,7 +4,6 @@ const preferDefault = m => (m && m.default) || m
 
 
 exports.components = {
-  "component---cache-dev-404-page-js": preferDefault(require("/Users/calebwhitmore/git/portfolio/.cache/dev-404-page.js")),
   "component---src-pages-404-js": preferDefault(require("/Users/calebwhitmore/git/portfolio/src/pages/404.js")),
   "component---src-pages-about-js": preferDefault(require("/Users/calebwhitmore/git/portfolio/src/pages/about.js")),
   "component---src-pages-bookmarks-js": preferDefault(require("/Users/calebwhitmore/git/portfolio/src/pages/bookmarks.js")),

@@ -47,3 +47,7 @@ description: "An E-Reader with a spine that actually belongs on your bookshelf."
 ![Side and spine view](./front-and-side.png)
 
 ![Detail view of the e-reader](./detail.png)
+
+
+![Boxed packaging view 4](./Packaging4.png)
+![Boxed packaging view 5](./Packaging5.png)
