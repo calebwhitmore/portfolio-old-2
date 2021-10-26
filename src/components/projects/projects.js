@@ -1,12 +1,12 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Project from "../project/project"
 
 import "./projects.scss"
 
 const Projects = ({ headshot }) => {
-  const data = StaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
