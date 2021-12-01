@@ -1,7 +1,5 @@
 import { Link } from "gatsby"
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import { Location } from "@reach/router"
 
 import "./header.scss"
 

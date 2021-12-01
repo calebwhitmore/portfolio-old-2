@@ -20,7 +20,7 @@ const AboutPage = () => {
         </div>
         <h4>
           Born in '93, I grew up in Hampshire. In 2016 I graduated with a degree
-          in Product design which taught me a lot about the design process.
+          in Product design at Brunel University, London.
         </h4>
         <h4>
           I love learning, and owning as much process as I can - from user
