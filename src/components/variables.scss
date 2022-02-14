@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
 :root {
   --black: #000000;
   --black90: rgba(0, 0, 0, 0.9);
@@ -25,62 +25,23 @@
   --light-grey40: rgba(215, 215, 215, 0.4);
   --dark-grey40: rgba(127.5, 127.5, 127.5, 0.4);
 
-  --theme-1: #0064ea;
+  --theme: #0064ea;
+  --theme-shade-1: #0057c9;
 
   --toggle-size: 52px;
 
-  --spacing: 32px;
-  --spacing2: 64px;
-  --spacing3: 96px;
-  --max-width: 800px;
+  --max-width: 1000px;
 
   --grid-template-columns-3: 4fr 4fr 4fr;
   --grid-template-columns-2: repeat(2, 1fr);
   --grid-template-columns-1: 1fr;
-
-  --font-size-xxl: 76px;
-  --font-size-xl: 60px;
-  --font-size-l: 48px;
-  --font-size-m: 32px;
-  --font-size-s: 24px;
-  --font-size-xs: 20px;
-
-  --border-radius-small: 5px;
-  --border-radius-large: 10px;
   --box-shadow-1: 0px 2px 8px 0px var(--black-overlay-08);
   
+  --header-background: blur(20px) contrast(100%) brightness(100%);
+  
+  font-size: 24px;
 }
 
-@media only screen and (max-width: 1000px) {
-  :root {
-    --grid-template-columns-3: 3fr 7fr;
-    --grid-template-columns-2: 1fr;
-
-    --spacing: 20px;
-    --spacing2: 40px;
-    --spacing3: 60px;
-
-    --font-size-xxl: 64px;
-    --font-size-xl: 52px;
-    --font-size-l: 36px;
-    --font-size-m: 28px;
-    --font-size-s: 20px;
-    --font-size-xs: 16px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  :root {
-    --grid-template-columns: 1;
-
-    --font-size-xxl: 52px;
-    --font-size-xl: 44px;
-    --font-size-l: 28px;
-    --font-size-m: 24px;
-    --font-size-s: 20px;
-    --font-size-xs: 16px;
-  }
-}
 @media (prefers-color-scheme: dark) {
   :root {
     --white: #000000;
@@ -103,6 +64,8 @@
     --black12: rgba(255, 255, 255, 0.12);
     --black08: rgba(255, 255, 255, 0.08);
     --black06: rgba(255, 255, 255, 0.06);
+
+    --header-background: blur(12px) contrast(100%) brightness(50%);
   }   
   .icon {
     filter: invert(1);
@@ -114,12 +77,14 @@
 body {
   margin: 0;
   overflow: visible;
-  background-color: var(--black06);
   top:0px;
-  width:100vw;
+  left:0px;
+  width:100%;
   height:auto;
+  min-height:100%;
   position:absolute;
-  padding:0 var(--spacing);
+  padding:0 1rem;
+  background-color: var(--white);
 
 }
 html {
@@ -147,37 +112,52 @@ div {
   padding: 0px;
   margin: 0px;
   font-family: "Source Sans Pro", sans-serif;
+  color:var(--black90);
 }
 h1 {
-  font-size: var(--font-size-xl);
-  line-height: var(--font-size-xxl);
-  font-weight: 700;
+  font-size: 5rem;
+  line-height: 5rem;
+  font-weight: 200;
+  font-family:'EB Garamond', serif;
+  margin: 2rem 0 3rem;
 }
 h2 {
-  font-size: var(--font-size-l);
-  line-height: var(--font-size-xl);
+  font-size: 1.6rem;
+  line-height: 2.8rem;
 }
 
 h3 {
-  font-size: var(--font-size-m);
-  line-height: var(--font-size-l);
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 
 h4 {
-  font-size: var(--font-size-s);
-  line-height: var(--font-size-m);
-  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 700;
 }
 
 p {
-  font-size: var(--font-size-s);
-  line-height: var(--font-size-m);
+  font-size: 0.7rem;
+  line-height: 1.2rem;
   font-weight: 400;
 }
 
 h1 a {
   &:hover {
     text-decoration: underline;
+  }
+}
+
+.title {
+  color: var(--black90);
+  margin:2rem 0rem 4rem;
+  text-align: left;
+
+  a {
+    display: inline;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
   }
 }
 
@@ -188,18 +168,21 @@ a {
 }
 
 .intro {
-  border-radius: var(--border-radius-large);
-  margin: var(--spacing) 0;
-  padding: var(--spacing2) 0;
+  border-radius: 0.5rem;
+  padding: 4rem 0;
   h1 {
     color: var(--black);
     text-align: left;
   }
 
   h4 {
-    margin-top: var(--spacing);
+    margin-top: 1rem;
     color: var(--black60);
   }
+}
+
+.body-text {
+  margin:2rem 0rem;
 }
 
 @keyframes fadeUp {
@@ -219,5 +202,22 @@ a {
   }
   100% {
     opacity: 1;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .body-text {
+    margin:2rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .body-text {
+    margin:1rem 0rem;
+  }
+  h1 {
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+    font-weight: 200;
+    font-family:'EB Garamond', serif;
   }
 }

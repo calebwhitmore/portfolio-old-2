@@ -10,7 +10,9 @@ headerImageAltTag: "A angled view of the mouse"
 description: "A computer mouse redesign, with a novel way to scroll."
 ---
 
-<div class="project-sub-head">
+![Scroll behaviour GIF](./scroll-behaviour.gif)
+
+<div class="body-text">
     <p class="project-sub-title">
         A design for a mouse concept.
     </p>
@@ -21,7 +23,7 @@ description: "A computer mouse redesign, with a novel way to scroll."
 
 ![Mouse sketch](./mouse-sketch.png)
 
-<div class="project-sub-head">
+<div class="body-text">
     <p class="project-sub-title">
         Scroll behaviour
     </p>
@@ -29,8 +31,6 @@ description: "A computer mouse redesign, with a novel way to scroll."
        Think of the scroll behaviour of the mouse as a joystick restricted to rotation about one axis. This approach means that to scroll long distances on screen the user doesn't need to flick the scroll wheel continuously, but can instead keep their finger holding forwards until they reach the point in the page they want ... at which point they can just let go. 
     </p>
 </div>
-
-![Scroll behaviour GIF](./scroll-behaviour.gif)
 
 ![Top view](./top-view.png)
 
@@ -42,7 +42,7 @@ description: "A computer mouse redesign, with a novel way to scroll."
 
 ![Context shot 2](./contextorthoganal.jpg)
 
-<div class="project-sub-head">
+<div class="body-text">
     <p class="project-sub-title">
         Illustrations
     </p>
@@ -55,7 +55,7 @@ description: "A computer mouse redesign, with a novel way to scroll."
 
 ![Dark mouse illustrations](./illustrations-dark.png)
 
-<div class="project-sub-head">
+<div class="body-text">
     <p class="project-sub-title">
         Packaging
     </p>

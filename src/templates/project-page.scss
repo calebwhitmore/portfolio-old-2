@@ -12,30 +12,31 @@
 
 @import ".././components/variables.scss";
 
-.project-page-container {
+.container {
   width: 100%;
   max-width: var(--max-width);
-  margin: calc(var(--spacing)) auto 0px auto;
+  margin: 0 auto 0px auto;
   grid-column: span 3;
   grid-column-start: 2;
   grid-column-end: 4;
   z-index: 2;
+  overflow: hidden;
+
   .gatsby-resp-image-link,
   .project-header-image, img {
     background-color: var(--black06);
     box-shadow: none;
-    transition: 0.3s all ease;
-    margin: 0px 0px var(--spacing2) 0px;
+    margin: 0px;
     box-shadow: 0px 0px 0px 1px var(--black06);
-    border-radius: var(--border-radius-large);
     overflow: hidden;
+    border-radius:0.5rem;
+    margin-bottom:2rem;
     &:focus {
       outline: none;
       box-shadow: 0px 0px 0px 4px var(--black);
     }
   }
   .project-header-image img {
-    margin:0px;
     background-color: var(--black06);
   }
 
@@ -49,16 +50,9 @@
     background-color: transparent;
   }
   .project-page {
-    .project-sub-head {
-      opacity: 0;
-      animation: fadeUp 0.2s forwards 0.1s ease;
-      border-top: 1px solid var(--black12);
-      padding:var(--spacing2) 0;
-
+    .body-text {
       .project-sub-title {
-        color: var(--black90);
-        font-weight:700;
-        margin: 0px 0px var(--spacing) 0px;
+        margin: 0px 0px 1rem 0px;
       }
 
       .project-description {
@@ -66,21 +60,16 @@
       }
     }
 
-    .project-sub-head + p, .project-sub-head + .project-open-content {
+    .body-text + p, .body-text + .project-open-content {
       .gatsby-resp-image-link,
       .project-header-image {
         margin-top: 0px;
       }
     }
 
-    .project-open-content {
-      opacity: 0;
-      animation: fadeUp 0.6s forwards 0.2s ease;
-    }
-
     h3,
     h4 {
-      margin: var(--spacing) 0px;
+      margin: 1rem 0px;
     }
     p {
       margin: 0px 0px;
@@ -91,14 +80,14 @@
     padding: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: var(--spacing);
-    margin: var(--spacing) 0;
+    grid-gap: 1rem;
+    margin: 1rem 0;
     a {
-      font-size: var(--font-size-m);
-      border-radius: var(--border-radius-large);
+      font-size: 1.2rem;
+      border-radius: 0.5rem;
       width: 100%;
       color: var(--neutral-light);
-      padding: calc(var(--spacing) / 2) 0px;
+      padding: calc(1rem / 2) 0px;
       display: flex;
       transition: 0.3s all ease;
 
@@ -122,13 +111,13 @@
         p {
           color: var(--black);
           transition: 0.25s all ease;
-          margin: calc(var(--spacing) / 4) 0px;
+          margin: calc(1rem / 4) 0px;
         }
       }
 
       &:hover {
         background-color: var(--black06);
-        padding: calc(var(--spacing) / 2);
+        padding: calc(1rem / 2);
         h4 {
           color: var(--black);
           font-variation-settings: "wdth" 20, "wght" 600;
@@ -151,7 +140,7 @@
         outline: none;
         box-shadow: 0px 0px 0px 4px var(--black);
         background-color: var(--black06);
-        padding: calc(var(--spacing) / 2);
+        padding: calc(1rem / 2);
         h4 {
           color: var(--black90);
           span {

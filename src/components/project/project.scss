@@ -8,7 +8,7 @@
 
 .project-container {
   @include transition;
-  border-radius: var(--border-radius-large);
+  border-radius: 1rem;
   overflow: hidden;
   transition: 0.3s all ease;
   opacity: 0;
@@ -18,9 +18,10 @@
 
   &:focus {
     outline: none;
+    box-shadow: 0px 0px 0px 4px var(--theme-1);
 
     .project {
-      background-color: var(--black);
+      background-color: var(--black24);
       .post-image {
         opacity: 0.4;
         filter: blur(8px);
@@ -34,8 +35,7 @@
 }
 
 .project {
-  background-color: var(--white);
-  border-radius: var(--border-radius-large);
+  background-color: var(--black06);
   transition: 0.3s all ease;
   min-height: 200px;
   position: static;
@@ -46,7 +46,7 @@
   }
 
   &:hover {
-    background-color: var(--black);
+    background-color: var(--black12);
     .post-image {
       opacity: 0.4;
       filter: blur(8px);
@@ -67,7 +67,9 @@
     flex-direction: column;
     align-content: flex-end;
     justify-content: center;
-    padding: var(--spacing);
+    padding: 1rem 1.4rem;
+    width: 100%;
+    height:100%;
     cursor: pointer;
   }
   .post-image {
@@ -78,19 +80,19 @@
     }
   }
 
-  h2,
+  h4,
   p {
     width: 100%;
-    text-align: left;
+    text-align: center;
     align-self: flex-end;
   }
 
-  h2 {
-    color: var(--white);
+  h4 {
+    color: var(--black);
   }
   p {
-    line-height: var(--font-size-s);
-    color: var(--white60);
-    margin-top: calc(var(--spacing) / 4);
+    line-height: 1rem;
+    color: var(--black60);
+    font-weight: 500;
   }
 }
