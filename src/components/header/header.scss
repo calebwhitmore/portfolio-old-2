@@ -57,7 +57,7 @@
       display: none;
     }
     p {
-      color: var(--black90);
+      color: var(--black60);
     }
     &:active {
       box-shadow: 0px 0px 0px 4px var(--theme);
@@ -78,15 +78,14 @@
     &:after {
       content: "";
       position: absolute;
-      bottom: 0px;
+      bottom: -1px;
       left: 0px;
       width: 100%;
-      height: 4px;
+      height: 1px;
       background-color: var(--black);
     }
     p {
       color: var(--black);
-      font-weight: 800;
     }
     img {
       opacity: 1;
@@ -131,7 +130,7 @@
       &:after {
         content: "";
         position: absolute;
-        top: 0px;
+        top: -1px;
         bottom: auto;
       }
     }

@@ -34,27 +34,29 @@ class ProjectPageTemplate extends React.Component {
         </div>
         <div className="more-content">
           {next && (
-            <Link className="next" to={next.fields.slug} rel="next">
+            <Link className="previous" to={next.fields.slug} rel="next">
               <div className="arrow">
                 <p>←</p>
               </div>{" "}
+              <p>
+                Previous
+              </p>
               <h4>
-                <span>Previous</span>
-                <br />
                 {next.frontmatter.title}
               </h4>
             </Link>
           )}
           {previous && (
-            <Link className="previous" to={previous.fields.slug} rel="prev">
-              <h4>
-                <span>Next</span>
-                <br />
-                {previous.frontmatter.title}
-              </h4>
+            <Link className="next" to={previous.fields.slug} rel="prev">
               <div className="arrow">
                 <p>→</p>
               </div>
+              <p>
+                Next
+              </p>
+              <h4>
+                {previous.frontmatter.title}
+              </h4>
             </Link>
           )}
         </div>

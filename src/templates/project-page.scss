@@ -20,15 +20,15 @@
   grid-column-start: 2;
   grid-column-end: 4;
   z-index: 2;
-  overflow: hidden;
+  overflow: visible;
 
   .gatsby-resp-image-link,
   .project-header-image, img {
     background-color: var(--black06);
     box-shadow: none;
     margin: 0px;
-    box-shadow: 0px 0px 0px 1px var(--black06);
-    overflow: hidden;
+    box-shadow: 0px 0px 0px 1px var(--black12);
+    overflow: visible;
     border-radius:0.5rem;
     margin-bottom:2rem;
     &:focus {
@@ -75,116 +75,113 @@
       margin: 0px 0px;
     }
   }
+}
 
-  .more-content {
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-    margin: 1rem 0;
-    a {
-      font-size: 1.2rem;
-      border-radius: 0.5rem;
-      width: 100%;
-      color: var(--neutral-light);
-      padding: calc(1rem / 2) 0px;
-      display: flex;
-      transition: 0.3s all ease;
+.more-content {
+  margin: 1rem 0 2rem ;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  a {
+    border-radius: 0.5rem;
+    padding: 0.5rem 0px;
+    display: flex;
+    flex-direction: column;
+    flex:0 1 50%;
+    transition: 0.3s all ease;
+    box-sizing: border-box;
 
+    p {
+      transition: 0.25s all ease;
+      width:100%;
+    }
+
+    h4 {
+      width:100%;
+    }
+
+    .arrow {
+      flex: 0 0 0px;
+      transition: 0.25s all ease;
+      opacity: 0;
+      flex: 1 1 0px;
+      width: 0px;
+      p {
+        color: var(--black);
+        transition: 0.25s all ease;
+        margin: calc(1rem / 4) 0px;
+      }
+    }
+
+    &:hover {
+      background-color: var(--black06);
+      padding: calc(1rem / 2);
       h4 {
-        flex: 1 1 auto;
-        transition: 0.25s all ease;
-        color: var(--black60);
-        flex: 1 1 100%;
+        color: var(--black);
+        font-variation-settings: "wdth" 20, "wght" 600;
         span {
-          font-weight:700;
-          opacity: 1;
+          color: var(--black);
+          font-variation-settings: "wdth" 20, "wght" 400;
         }
       }
-
       .arrow {
-        flex: 0 0 0px;
-        transition: 0.25s all ease;
-        opacity: 0;
-        flex: 1 1 0px;
-        width: 0px;
+        opacity: 1;
+        flex: 1 1 40px;
+        margin: 0px;
+      }
+    }
+
+    &:active {
+      background-color: var(--black12);
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 0px 4px var(--black);
+      background-color: var(--black06);
+      padding: calc(1rem / 2);
+      h4 {
+        color: var(--black90);
+        span {
+          color: var(--black60);
+        }
+      }
+      .arrow {
+        opacity: 1;
+        flex: 1 1 40px;
+        margin: 0px;
+      }
+    }
+  }
+  .next {
+    text-align: right;
+    grid-column-start: 2;
+
+    .arrow {
+      p {
+        transform: translateX(-4px);
+      }
+    }
+
+    &:hover {
+      .arrow {
         p {
-          color: var(--black);
-          transition: 0.25s all ease;
-          margin: calc(1rem / 4) 0px;
-        }
-      }
-
-      &:hover {
-        background-color: var(--black06);
-        padding: calc(1rem / 2);
-        h4 {
-          color: var(--black);
-          font-variation-settings: "wdth" 20, "wght" 600;
-          span {
-            color: var(--black);
-            font-variation-settings: "wdth" 20, "wght" 400;
-          }
-        }
-        .arrow {
-          opacity: 1;
-          flex: 1 1 40px;
-          margin: 0px;
-        }
-      }
-
-      &:active {
-        background-color: var(--black12);
-      }
-      &:focus {
-        outline: none;
-        box-shadow: 0px 0px 0px 4px var(--black);
-        background-color: var(--black06);
-        padding: calc(1rem / 2);
-        h4 {
-          color: var(--black90);
-          span {
-            color: var(--black90);
-          }
-        }
-        .arrow {
-          opacity: 1;
-          flex: 1 1 40px;
-          margin: 0px;
+          transform: translateX(0px);
         }
       }
     }
-    .previous {
-      text-align: right;
-      grid-column-start: 2;
-
-      .arrow {
-        p {
-          transform: translateX(-4px);
-        }
-      }
-
-      &:hover {
-        .arrow {
-          p {
-            transform: translateX(0px);
-          }
-        }
+  }
+  .previous {
+    text-align: left;
+    grid-column-start: 1;
+    .arrow {
+      p {
+        transform: translateX(-4px);
       }
     }
-    .next {
-      text-align: left;
-      grid-column-start: 1;
+    &:hover {
       .arrow {
         p {
-          transform: translateX(-4px);
-        }
-      }
-      &:hover {
-        .arrow {
-          p {
-            transform: translateX(0px);
-          }
+          transform: translateX(0px);
         }
       }
     }

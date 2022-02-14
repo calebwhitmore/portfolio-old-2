@@ -115,11 +115,12 @@ div {
   color:var(--black90);
 }
 h1 {
-  font-size: 5rem;
-  line-height: 5rem;
-  font-weight: 200;
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 600;
   font-family:'EB Garamond', serif;
   margin: 2rem 0 3rem;
+  margin:2rem 0rem 4rem;
 }
 h2 {
   font-size: 1.6rem;
@@ -132,9 +133,10 @@ h3 {
 }
 
 h4 {
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: 800;
+  font-family:'EB Garamond', serif;
 }
 
 p {
@@ -151,7 +153,6 @@ h1 a {
 
 .title {
   color: var(--black90);
-  margin:2rem 0rem 4rem;
   text-align: left;
 
   a {
@@ -215,9 +216,9 @@ a {
     margin:1rem 0rem;
   }
   h1 {
-    font-size: 3.6rem;
-    line-height: 3.6rem;
-    font-weight: 200;
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 800;
     font-family:'EB Garamond', serif;
   }
 }
