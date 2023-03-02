@@ -43,7 +43,6 @@ const Projects = ({ headshot }) => {
 
   return (
     <div className="projects">
-
         {projects.map(({ node, index }) => {
           return <Project project={node} key={index} index={index} />
         })}

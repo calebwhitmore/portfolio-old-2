@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
-import { Link } from "gatsby";
-import "animate.css/animate.min.css";
 import "./bookmarks.scss";
-
-import linkIcon from "../images/icons/Link.svg";
-
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 class BookmarksPage extends React.Component {
@@ -22,7 +17,7 @@ class BookmarksPage extends React.Component {
           title: "Timothy Achumba",
           url: "https://timothyachumba.com/",
           description:
-            "Incredibly talented Principle Designer at Microsoft that knows craft and code. Apparently a magician in Origami."
+            "Incredibly talented Principle Designer at Microsoft that knows craft and code."
         },
         {
           id: 1,
@@ -30,7 +25,7 @@ class BookmarksPage extends React.Component {
           title: "Dom Davies",
           url: "https://www.domdavies.com/",
           description:
-            "Designer/Prototyper at Apple with an eye for the details. Led the Outlook mobile redesign back in 2018"
+            "Designer/Prototyper at Apple with an eye for the details. Led the Outlook mobile redesign back in 2018."
         },
         {
           id: 2,
@@ -74,7 +69,7 @@ class BookmarksPage extends React.Component {
         },
         {
           id: 7,
-          kind: "other",
+          kind: "resource",
           title: "Awwwards",
           url: "https://www.awwwards.com/",
           description:
@@ -82,7 +77,7 @@ class BookmarksPage extends React.Component {
         },
         {
           id: 8,
-          kind: "other",
+          kind: "resource",
           title: "Bēhance",
           url: "https://www.behance.net/",
           description:
@@ -90,11 +85,11 @@ class BookmarksPage extends React.Component {
         },
         {
           id: 9,
-          kind: "other",
+          kind: "resource",
           title: "Abduzeedo",
           url: "https://abduzeedo.com/",
           description:
-            "Founded by Fabio Sasso in 2006 as a personal blog, this is a collective of individual writers sharing articles about design, photography, and UX"
+            "Founded by Fabio Sasso in 2006 as a personal blog, this is a collective of individual writers sharing articles about design, photography, and UX."
         },
         {
           id: 10,
@@ -126,7 +121,7 @@ class BookmarksPage extends React.Component {
           title: "Brian Lovin",
           url: "https://brianlovin.com",
           description:
-            "A really talented and active Software Designer at GitHub"
+            "A really talented and active Software Designer at GitHub."
         },
         {
           id: 13,
@@ -150,15 +145,47 @@ class BookmarksPage extends React.Component {
           title: "Donna Seo",
           url: "http://donnaseo.com",
           description:
-            "An amazingly talented Colleague and friend at Microsoft. Leading the design of Outlook Desktop"
+            "An amazingly talented Colleague and friends that I used to work with at Microsoft."
         },
         {
-          id: 16,
+          id: 17,
           kind: "portfolio",
-          title: "Siddhant Mehta",
-          url: "https://www.siddhant.ca",
+          title: "Colin Moll",
+          url: "https://www.colinmoll.net",
           description:
-            "A good friend from my Vancouver days, we worked side by side for a long time at Microsoft. Fondly remember our lunches around the city together."
+            "Puts the motion in emotion. One of the incredible motion designers that I work with at Outlook."
+        },
+        {
+          id: 18,
+          kind: "resource",
+          title: "Lovers Magazine",
+          url: "https://www.loversmagazine.com",
+          description:
+            "Lovers Magazine is a diverse and inclusive online community for creative professionals. "
+        },
+        {
+          id: 19,
+          kind: "other",
+          title: "The Guardian",
+          url: "https://www.theguardian.com",
+          description:
+            "My go to for most general news updates. I also love their design system on web and mobile - it's super robust."
+        },
+        {
+          id: 20,
+          kind: "other",
+          title: "Monocle",
+          url: "https://www.monocle.com",
+          description:
+            "Pretty much the only magazine that I purchase nowadays. Tying together global affairs, business, culture and design."
+        },
+        {
+          id: 21,
+          kind: "other",
+          title: "Muji",
+          url: "https://www.muji.com",
+          description:
+            "Did I mention I love Muji? I can spend hours browsing their well refined, minimalistic products. I was extremely happy to visit their 7 floor superstore in Ginza, Tokyo, when I visited a couple of years ago."
         }
       ]
     };
@@ -175,13 +202,20 @@ class BookmarksPage extends React.Component {
     return (
       <Layout id={1}>
         <SEO title="bookmarks" />
-        <h2 className="title">Designers and resources that I find inspiring.</h2>
+        <div className="body-text">
+          <h1 className="title">Bookmarks</h1>
+          <p className="description">
+            It's important to stay inspired. For design I do so by looking at the work happening around me, and through visiting resources and sites that I naturally discover across the industry. I get excited when I see someone who's perfected their craft, because it gives me a new challenge, a new learning opportunity, and a new goal to aspire towards. 
+            <br/> <br/> 
+            I've collected this list for two reasons. For myself as a reminder to revisit these sites, but also to share with you. Maybe you're looking for inspiration - or (more likely) you're a recruiter looking for candidates. And if I don't seem like a good fit for your team, here's a list of other talented designers for you to reach out to. 
+          </p>
+        </div>
         <div className="bookmarks-container">
           <div className="bookmarks-header">
             <button
               className={
-                "tab " +
-                (this.state.selectedTab == "portfolios" ? "active " : "")
+                "tab link " +
+                (this.state.selectedTab === "portfolios" ? "active " : "")
               }
               onClick={() => this.selectTab("portfolios")}
             >
@@ -189,8 +223,8 @@ class BookmarksPage extends React.Component {
             </button>
             <button
               className={
-                "tab " +
-                (this.state.selectedTab == "resources" ? "active " : "")
+                "tab link " +
+                (this.state.selectedTab === "resources" ? "active " : "")
               }
               onClick={() => this.selectTab("resources")}
             >
@@ -198,7 +232,7 @@ class BookmarksPage extends React.Component {
             </button>
             <button
               className={
-                "tab " + (this.state.selectedTab == "other" ? "active " : "")
+                "tab link " + (this.state.selectedTab === "other" ? "active " : "")
               }
               onClick={() => this.selectTab("other")}
             >
@@ -206,51 +240,51 @@ class BookmarksPage extends React.Component {
             </button>
           </div>
           <TransitionGroup timeout={200} className="bookmarks">
-            {this.state.selectedTab == "portfolios" ? (
+            {this.state.selectedTab === "portfolios" ? (
               <CSSTransition id={2} timeout={300}>
                 <div>
                   {this.state.bookmarks
-                    .filter((item) => item.kind == "portfolio")
+                    .filter((item) => item.kind === "portfolio")
                     .map((item) => (
-                      <a id={item.id} className="bookmark" href={item.url}>
+                      <a id={item.id} className="bookmark link " href={item.url}>
                         <div className="left">
-                          <h4>{item.title}</h4>
-                          <p className="url">{item.url}</p>
+                          <p>{item.title}</p>
                           <p>{item.description}</p>
+                          <p className="url">{item.url}</p>
                         </div>
                       </a>
                     ))}
                 </div>
               </CSSTransition>
             ) : null}
-            {this.state.selectedTab == "resources" ? (
+            {this.state.selectedTab === "resources" ? (
               <CSSTransition id={2} timeout={300}>
                 <div>
                   {this.state.bookmarks
-                    .filter((item) => item.kind == "resource")
+                    .filter((item) => item.kind === "resource")
                     .map((item) => (
-                      <a id={item.id} className="bookmark" href={item.url}>
+                      <a id={item.id} className="bookmark link " href={item.url}>
                         <div className="left">
-                          <h4>{item.title}</h4>
-                          <p className="url">{item.url}</p>
+                          <p>{item.title}</p>
                           <p>{item.description}</p>
+                          <p className="url">{item.url}</p>
                         </div>
                       </a>
                     ))}
                 </div>
               </CSSTransition>
             ) : null}
-            {this.state.selectedTab == "other" ? (
+            {this.state.selectedTab === "other" ? (
               <CSSTransition id={3} timeout={300}>
                 <div>
                   {this.state.bookmarks
-                    .filter((item) => item.kind == "other")
+                    .filter((item) => item.kind === "other")
                     .map((item) => (
-                      <a id={item.id} className="bookmark" href={item.url}>
+                      <a id={item.id} className="bookmark link " href={item.url}>
                         <div className="left">
-                          <h4>{item.title}</h4>
-                          <p className="url">{item.url}</p>
+                          <p>{item.title}</p>
                           <p>{item.description}</p>
+                          <p className="url">{item.url}</p>
                         </div>
                       </a>
                     ))}

@@ -7,9 +7,9 @@ import "./project.scss"
 export default function Project(props) {
   return (
     <Link to={props.project.fields.slug} className="project-container">
-      <div className="project">
+      <div className="project link">
         <div className="projectTileText">
-          <h4>{props.project.frontmatter.title}</h4>
+          <h1>{props.project.frontmatter.title}</h1>
           <p>{props.project.frontmatter.tags}</p>
         </div>
         <Img

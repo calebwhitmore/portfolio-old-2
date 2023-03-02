@@ -6,8 +6,28 @@ module.exports = {
     description: `Caleb whitmore is a driven designer from the UK, with a BSc in Product design from Brunel University, London. He works for Microsoft on an email client called Outlook and is based in Seattle, Washington. He has experience in UX design, Product design, 3D modelling and rendering, motion design, graphic design and sketching.`,
     author: `calebwhitmore`,
   },
-  plugins: [
-    `gatsby-plugin-react-helmet`,
+  plugins: ["gatsby-plugin-sass", {
+    resolve: 'gatsby-plugin-google-analytics',
+    options: {
+      "trackingId": "UA-61090085-1"
+    }
+  }, "gatsby-plugin-image", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      "name": "images",
+      "path": "./src/images/"
+    },
+    __key: "images"
+  }, {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      "name": "pages",
+      "path": "./src/pages/"
+    },
+    __key: "pages"
+  },
+  //newly added
+  `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -22,7 +42,8 @@ module.exports = {
       options: {
         useMozJpeg: false,
         stripMetadata: true,
-        defaultQuality: 75,
+        defaultQuality: 100,
+        pngQuality: 100,
       },
     },
     `gatsby-transformer-sharp`,
@@ -35,6 +56,7 @@ module.exports = {
             options: {
               maxWidth: 3000,
               backgroundColor:'transparent',
+              pngQuality: 100,
             },
           },
           {
@@ -71,8 +93,5 @@ module.exports = {
         path: `${__dirname}/src/projects`,
       },
     }
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-  ],
-}
+]
+};

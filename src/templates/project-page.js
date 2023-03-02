@@ -25,7 +25,7 @@ class ProjectPageTemplate extends React.Component {
         <SEO title={project.frontmatter.title} description={project.excerpt} />
         <div className="container">
           <div className="project-page">
-            <h1>{project.frontmatter.description}</h1>
+            {/* <h1>{project.frontmatter.description}</h1> */}
             <div
               className="project-open-content"
               dangerouslySetInnerHTML={{ __html: project.html }}
@@ -34,33 +34,33 @@ class ProjectPageTemplate extends React.Component {
         </div>
         <div className="more-content">
           {next && (
-            <Link className="previous" to={next.fields.slug} rel="next">
+            <Link className="previous link " to={next.fields.slug} rel="next">
               <div className="arrow">
                 <p>←</p>
               </div>{" "}
               <p>
                 Previous
               </p>
-              <h4>
+              <h2>
                 {next.frontmatter.title}
-              </h4>
+              </h2>
             </Link>
           )}
           {previous && (
-            <Link className="next" to={previous.fields.slug} rel="prev">
+            <Link className="next link " to={previous.fields.slug} rel="prev">
               <div className="arrow">
                 <p>→</p>
               </div>
               <p>
                 Next
               </p>
-              <h4>
+              <h2>
                 {previous.frontmatter.title}
-              </h4>
+              </h2>
             </Link>
           )}
         </div>
-        <Projects />
+        {/* <Projects /> */}
       </Layout>
     );
   }

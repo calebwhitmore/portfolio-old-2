@@ -1,11 +1,13 @@
 import { Link } from "gatsby";
 import React from "react";
 
+import portfolio from '../../images/icons/portfolio.svg'
+import profile from '../../images/icons/profile.svg'
+import bookmarks from '../../images/icons/bookmark.svg'
+import mail from '../../images/icons/mail.svg'
+
+
 import "./header.scss";
-import portfolioIcon from "../../images/icons/portfolio-3.svg";
-import aboutIcon from "../../images/icons/about3.svg";
-import bookmarkIcon from "../../images/icons/bookmark3.svg";
-import contactIcon from "../../images/icons/contact.svg";
 
 class Header extends React.Component {
   constructor() {
@@ -25,44 +27,44 @@ class Header extends React.Component {
     return (
       <div className="header-container">
         <div className="header">
-          <Link className="header-title" to="/">
-            <p >Caleb Whitmore</p>
+          <Link className="header-title link " to="/">
+            <h4>Caleb Whitmore</h4>
           </Link>
           <div className="header-item">
             <Link
               className={
-                "nav-link " +
+                "nav-link link " +
                 (this.state.pageTag === "" ? "selected " : "unselected ")
               }
               to="/"
             >
-              <img src={portfolioIcon} className="icon" />
+              <img src={portfolio} className="icon"></img>
               <p>Portfolio</p>
             </Link>
             <Link
               className={
-                "nav-link " +
+                "nav-link link " +
                 (this.state.pageTag === "about" ? "selected " : "unselected ")
               }
               to="/about"
             >
-              <img src={aboutIcon} className="icon" />
+              <img src={profile} className="icon"></img>
               <p>About</p>
             </Link>
             <Link
               className={
-                "nav-link " +
+                "nav-link link " +
                 (this.state.pageTag === "bookmarks"
                   ? "selected "
                   : "unselected ")
               }
               to="/bookmarks"
             >
-              <img src={bookmarkIcon} className="icon" />
+              <img src={bookmarks} className="icon"></img>
               <p>Bookmarks</p>
             </Link>
-            <a className={"nav-link "} href="mailto:caleb.whitmore93@gmail.com">
-              <img src={contactIcon} className="icon" />
+            <a className={"nav-link link "} href="mailto:caleb.whitmore93@gmail.com">
+              <img src={mail} className="icon"></img>
               <p>Contact</p>
             </a>
           </div>

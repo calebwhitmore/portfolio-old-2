@@ -3,8 +3,8 @@ import React from "react";
 import Layout from "../components/layout/layout";
 import Projects from "../components/projects/projects";
 import SEO from "../components/seo";
-import "animate.css/animate.min.css";
-import headshot from "../images/headshot.png";
+
+import HeadshotSketch from "../images/headshot-sketch.png";
 
 import "./index.scss";
 
@@ -12,36 +12,48 @@ const IndexPage = () => {
   return (
     <Layout id={1}>
       <SEO title="Home" />
-      <p className="name-small-screen">Caleb Whitmore</p>
-      <h1 className="title">
-        Senior Designer at Microsoft. <br />
-        Lover of pixels
-      </h1>
-      <Projects />
-      <div className="about">
-        <img src={headshot}></img>
-        <div>
-          <h4>A little bit about me</h4>
-          <p>
-            Born in '93, I grew up in Hampshire - a county in the south of
-            England. In 2016 I graduated with a degree in Product design at
-            Brunel University London, after completing an exchange at TU Delft
-            in the Netherlands. Shortly after I started at Microsoft on Outlook.
-            <br></br>
-            <br></br>I love learning, and owning as much process as I can - from
-            user research to pixel pushing, and even front end development. My
-            day to day varies from initial research and strategy all the way
-            through to final UI proposals and prototypes.
-            <br></br>
-            <br></br>
-            I've been in the industry for 5 years, and possess a diverse
-            skillset spanning both digital and physical. I like to work on
-            meaningful products and live for a good design system. Outside of
-            work you can find me cycling, playing basketball, or tinkering with
-            a new hobby (3d printing is the latest one).
-          </p>
-        </div>
+      {/* <h1 className="title">
+        I'm a cross-disciplinary designer that loves craft.
+      </h1> */}
+
+      <div class="body-text">
+        <h1 class="title ">Hi, I'm Caleb.</h1>
+        <p class="description">
+          I'm a multi-disciplinary designer that loves craft.
+          <br></br>
+          <br></br>Welcome to my portfolio website: my own little corner of the
+          web. Here you'll find a variety of projects that span the digital and
+          the physical. Unless otherwise stated the projects are completely my
+          own. I trained as an Industrial designer in school, but have been
+          working in software design over the past 7 years. You'll see a mix of
+          work here; some projects completed in spare time and some completed
+          through my profession.<br></br>
+          <br></br> Find me on
+          <a
+            className="link"
+            target="_blank"
+            href="https://www.linkedin.com/in/caleb-whitmore/"
+          >
+            LinkedIn{" "}
+          </a>
+          <a
+            className="link"
+            target="_blank"
+            href="https://www.linkedin.com/in/caleb-whitmore/"
+          >
+            Twitter{" "}
+          </a>
+          and
+          <a
+            className="link"
+            target="_blank"
+            href="https://www.linkedin.com/in/caleb-whitmore/"
+          >
+            Dribbble{" "}
+          </a>
+        </p>
       </div>
+      <Projects />
     </Layout>
   );
 };

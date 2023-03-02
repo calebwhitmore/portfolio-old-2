@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from "../header/header"
 import Footer from "../footer/footer"
+import Cursor from "../cursor/cursor"
 import "./layout.scss"
 
 class Layout extends React.Component {
@@ -45,8 +46,9 @@ class Layout extends React.Component {
         />
         <div className="page">
           {this.props.children}
-          </div>
+        </div>
         <Footer/>
+        <Cursor/>
       </div>
     )
   }

@@ -3,23 +3,21 @@ path: "/project/icons"
 date: "2019-04-01"
 title: "Design icons"
 tags: "Illustration, Graphic design"
-projectImage: "./icon-thumbnail.png"
+projectImage: "./icons-tile.png"
 projectImageAltTag: "Illustration"
-headerImage: "./vector.png"
+headerImage: "./icons-tile.png"
 headerImageAltTag: "Illustration vector"
 description: "Illustration series of some designs I think are pretty iconic."
 ---
 
-![Header image](./vector.png)
-
 <div class="body-text">
-    <h4 class="project-sub-title">
-        A homage to some of my favourite products.
-    </h4>
+    <h1 class="project-title">
+        Design Icons
+    </h1>
     <p class="project-description">
-        I've built a huge appreciation for good design over the years. Documentaries like Objectified and Abstract have played a huge role in helping spread design awareness and appreciation. While I can't hope to produce something to the scale of those projects, this is my own small little tribute to products I appreciate. 
+        I've built a big appreciation for what I like to think is good design over the years. Documentaries like Objectified and Abstract have played a huge role in helping spread design awareness and appreciation. While I can't hope to produce something to the scale of Gary Hustwit, this is my own small tribute to products I like. 
         <br/><br/>
-        Using illustrator, I've tried to distill each objects form down into a style that's bold, simple, and captures each object by their core visual elements. With objects ranging from Aesop handwash to the Porsche 911.
+        I've tried to distill each objects form down into a style that's bold, simple, and captures each object by their core visual elements. With objects ranging from Aesop handwash to the Porsche 911.
     </p>
 </div>
 
