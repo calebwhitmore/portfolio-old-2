@@ -145,7 +145,7 @@ class BookmarksPage extends React.Component {
           title: "Donna Seo",
           url: "http://donnaseo.com",
           description:
-            "An amazingly talented Colleague and friends that I used to work with at Microsoft."
+            "An amazingly talented Colleague that I used to work with at Microsoft."
         },
         {
           id: 17,

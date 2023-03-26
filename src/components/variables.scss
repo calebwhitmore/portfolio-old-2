@@ -37,8 +37,8 @@
   
   --toggle-size: 52px;
   
-  --max-width: 1000px;
-  --max-text-width: 800px;
+  --max-width: 1200px;
+  --max-text-width: 1000px;
   
   --grid-template-columns-3: 4fr 4fr 4fr;
   --grid-template-columns-2: repeat(2, 1fr);
@@ -87,13 +87,13 @@
 
 
 .title {
-  max-width:760px;
+  max-width:var(--max-text-width);
   margin-bottom:2rem;
 }
 
 .description {
   color: var(--dark6);
-  max-width:760px;
+  max-width:var(--max-text-width);
 }
 
 html {
