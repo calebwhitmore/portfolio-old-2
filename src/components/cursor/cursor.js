@@ -13,8 +13,8 @@ class Cursor extends React.Component {
   };
 
   hideCursor() {
+    var cursor = document.getElementById("cursor");
     document.addEventListener("mouseleave", function(event){
-
       if(event.clientY <= 0 || event.clientX <= 0 || (event.clientX >= window.innerWidth || event.clientY >= window.innerHeight))
       {
     
