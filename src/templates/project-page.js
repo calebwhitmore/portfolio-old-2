@@ -25,7 +25,6 @@ class ProjectPageTemplate extends React.Component {
         <SEO title={project.frontmatter.title} description={project.excerpt} />
         <div className="container">
           <div className="project-page">
-            {/* <h1>{project.frontmatter.description}</h1> */}
             <div
               className="project-open-content"
               dangerouslySetInnerHTML={{ __html: project.html }}

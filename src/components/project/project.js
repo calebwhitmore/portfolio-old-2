@@ -1,10 +1,10 @@
-import React from "react"
-import Link from "gatsby-link"
-import Img from "gatsby-image"
+import React from "react";
+import {Link} from "gatsby-link";
+import { GatsbyImage } from "gatsby-plugin-image";
 
-import "./project.scss"
+import "./project.scss";
 
-export default function Project(props) {
+const Project = (props) => {
   return (
     <Link to={props.project.fields.slug} className="project-container">
       <div className="project link">
@@ -12,12 +12,16 @@ export default function Project(props) {
           <h1>{props.project.frontmatter.title}</h1>
           <p>{props.project.frontmatter.tags}</p>
         </div>
-        <Img
+        <GatsbyImage
           className="post-image"
-          fluid={props.project.frontmatter.projectImage.childImageSharp.fluid}
+          image={
+            props.project.frontmatter.projectImage.childImageSharp.gatsbyImageData
+          }
           alt={props.project.frontmatter.projectImageAltTag}
         />
       </div>
     </Link>
-  )
+  );
 }
+
+export default Project;

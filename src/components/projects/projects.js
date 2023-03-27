@@ -1,53 +1,57 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { StaticQuery, graphql } from "gatsby";
 
-import Project from "../project/project"
+import Project from "../project/project";
 
-import "./projects.scss"
+import "./projects.scss";
 
-const Projects = ({ headshot }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          firstName
-          secondName
-        }
-      }
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-        edges {
-          node {
-            excerpt
-            fields {
-              slug
-            }
-            frontmatter {
-              date(formatString: "MMMM DD, YYYY")
+const Projects = () => {
+  return (
+    <StaticQuery
+      query={graphql`
+        query HeadingQuery {
+          site {
+            siteMetadata {
               title
-              tags
-              projectImage {
-                childImageSharp {
-                  fluid(maxWidth: 1200, quality: 100) {
-                    ...GatsbyImageSharpFluid
+              firstName
+              secondName
+            }
+          }
+          allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+            edges {
+              node {
+                excerpt
+                fields {
+                  slug
+                }
+                frontmatter {
+                  date(formatString: "MMMM DD, YYYY")
+                  title
+                  tags
+                  projectImage {
+                    childImageSharp {
+                      gatsbyImageData(
+                        width: 3000
+                        placeholder: BLURRED
+                        formats: [AUTO, WEBP, AVIF]
+                      )
+                    }
                   }
                 }
               }
             }
           }
         }
-      }
-    }
-  `)
-  const projects = data.allMarkdownRemark.edges
-
-  return (
-    <div className="projects">
-        {projects.map(({ node, index }) => {
-          return <Project project={node} key={index} index={index} />
-        })}
-    </div>
-  )
+      `}
+      render={data => (
+        <div className="projects">
+          {data.allMarkdownRemark.edges.map(({ node, index }) => {
+            return <Project project={node} key={index} index={index} />;
+          })}
+        </div>
+      )}
+    />
+  );
 }
 
 export default Projects

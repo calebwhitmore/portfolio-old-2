@@ -8,12 +8,6 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-sass",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "UA-61090085-1",
-      },
-    },
     "gatsby-plugin-image",
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
@@ -45,17 +39,25 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-remark`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
-        useMozJpeg: false,
-        stripMetadata: true,
-        defaultQuality: 100,
-        pngQuality: 100,
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
       },
     },
-    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -65,7 +67,6 @@ module.exports = {
             options: {
               maxWidth: 3000,
               backgroundColor: "transparent",
-              pngQuality: 100,
             },
           },
           {
@@ -79,43 +80,43 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: "language-",
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: false,
-              noInlineHighlight: false,
-              languageExtensions: [
-                {
-                  language: "superscript",
-                  extend: "javascript",
-                  definition: {
-                    superscript_types: /(SuperType)/,
-                  },
-                  insertBefore: {
-                    function: {
-                      superscript_keywords: /(superif|superelse)/,
-                    },
-                  },
-                },
-              ],
-              prompt: {
-                user: "root",
-                host: "localhost",
-                global: false,
-              },
-              escapeEntities: {},
-            },
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-transformer-remark`,
+    //   options: {
+    //     plugins: [
+    //       {
+    //         resolve: `gatsby-remark-prismjs`,
+    //         options: {
+    //           classPrefix: "language-",
+    //           inlineCodeMarker: null,
+    //           aliases: {},
+    //           showLineNumbers: false,
+    //           noInlineHighlight: false,
+    //           languageExtensions: [
+    //             {
+    //               language: "superscript",
+    //               extend: "javascript",
+    //               definition: {
+    //                 superscript_types: /(SuperType)/,
+    //               },
+    //               insertBefore: {
+    //                 function: {
+    //                   superscript_keywords: /(superif|superelse)/,
+    //                 },
+    //               },
+    //             },
+    //           ],
+    //           prompt: {
+    //             user: "root",
+    //             host: "localhost",
+    //             global: false,
+    //           },
+    //           escapeEntities: {},
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

@@ -4,21 +4,15 @@ import Layout from "../components/layout/layout";
 import Projects from "../components/projects/projects";
 import SEO from "../components/seo";
 
-import HeadshotSketch from "../images/headshot-sketch.png";
-
 import "./index.scss";
 
 const IndexPage = () => {
   return (
     <Layout id={1}>
       <SEO title="Home" />
-      {/* <h1 className="title">
-        I'm a cross-disciplinary designer that loves craft.
-      </h1> */}
-
-      <div class="body-text">
-        <h1 class="title ">Hi, I'm Caleb.</h1>
-        <p class="description">
+      <div className="body-text">
+        <h1 className="title ">Hi, I'm Caleb.</h1>
+        <p className="description">
           I'm a multi-disciplinary designer that loves craft.
           <br></br>
           <br></br>Welcome to my portfolio website: my own little corner of the
